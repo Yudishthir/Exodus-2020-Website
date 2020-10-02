@@ -1,0 +1,119 @@
+@import "colours.css";
+@import "common.css";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Consolas;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+/* Group of title, quote and resouces */
+#home {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	z-index: -2;
+}
+
+#home-right {
+	margin-top: 2rem;
+	width: 35%;
+	border: 2px solid var(--secondary-color);
+	padding: 1.5rem;
+}
+
+#home-right > h1 {
+	margin-bottom: 1rem;
+	font-weight: bold;
+}
+
+#home-right > .content {
+	font-size: 1.25rem;
+}
+
+.divider {
+	margin: 0.8rem 0;
+	font-size: 0.875rem;
+	word-wrap: break-word;
+	width: 100%;
+}
+
+/* For college title */
+#home-title > h1 {
+	margin-top: 9rem;
+	font-size: 4rem;
+	font-weight: bold;
+	z-index: -2;
+}
+
+/* For the quote */
+#quote {
+	margin-top: 2rem;
+	max-width: 40.4rem;
+	line-height: 1.43rem;
+}
+
+#quote > p {
+	margin-top: 1rem;
+	position: relative;
+	left: 100px;
+	word-wrap: normal;
+}
+
+/* For the resources section */
+#home-left {
+	width: 58%;
+}
+
+#resources {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4rem;
+	height: 300px;
+	width: 100%;
+}
+
+#resources > div {
+	width: 46%;
+}
+
+#resources > #resources-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#resources > #resources-left > #culture {
+	height: 30%;
+	width: 100%;
+	background-color: var(--secondary-color);
+}
+
+#resources > #resources-left > #research {
+	height: 60%;
+	width: 100%;
+}
+
+#resources > #statistics,
+#resources > #resources-left > div {
+	border: 2px solid var(--secondary-color);
+}
+
+.section-filler {
+	height: 4rem;
+	width: 100%;
+}
+
+/* Research page */
+#research-title > h1 {
+	margin-top: 3rem;
+	font-size: 4rem;
+	font-weight: bold;
+}

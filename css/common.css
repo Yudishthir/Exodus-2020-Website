@@ -1,0 +1,36 @@
+/* Container */
+.container {
+	margin: 3rem 9.5rem 0 9.5rem;
+}
+
+#filler {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 8rem;
+	background-color: var(--primary-color);
+}
+
+/* Web Navbar */
+.web-nav {
+	display: flex;
+	position: fixed;
+	top: 4rem;
+	width: 38rem;
+	justify-content: space-between;
+	z-index: 10;
+}
+
+.web-nav > li {
+	text-decoration: none;
+	list-style: none;
+	cursor: pointer;
+	font-size: 1.25rem;
+	padding: 0.4rem 1.5rem;
+}
+
+/* For the active element of the navbar */
+#active {
+	border: 2px solid var(--secondary-color);
+}

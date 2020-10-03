@@ -30,15 +30,14 @@ body {
 	display: flex;
 	position: fixed;
 	top: 4rem;
-	width: 38rem;
-	justify-content: space-between;
+	width:100%;
+
 	z-index: 10;
 }
 .web-nav > ul > li{
 	list-style: none;
 	display : inline-block;
 }
-
 .web-nav > ul > li > a{
 	text-decoration: none;
 	cursor: pointer;
@@ -46,8 +45,68 @@ body {
 	padding: 0.4rem 1.5rem;
 	color: #14c81a;
 }
+.web-nav > button {
+	display: none;
+}
 
 /* For the active element of the navbar */
 #active {
 	border: 2px solid var(--secondary-color);
+}
+
+/* Nav bar  and container responsive */
+@media screen and (max-width: 760px)
+{
+	#filler {
+		height: 4rem;
+	}
+	.container {
+		margin: 3rem 1rem 0 1rem;
+	}
+	.web-nav {
+		background: #000;
+	}
+	.web-nav > ul{
+		display: none;
+	}
+	.web-nav > button {
+		display:flex;
+		margin-left: 1.5rem;
+		font-size: 140%;
+		position:fixed;
+		top:1.5rem;
+		background: #000;
+		color:#14c81a;
+		box-shadow: none;
+		border:0;
+	}
+	.web-nav > ul >  li{
+		padding: 15px 0;
+	}
+	.web-nav > button:active, .web-nav > button:hover {
+		outline: 0;
+	}
+	#mobileButton {
+		display: flex;
+	}
+}
+/* To maintain Navigation menu after responsive change*/
+@media screen and (min-width: 760px)
+{
+	.web-nav {
+		width:100% !important;
+	}
+	.web-nav-list {
+		flex-direction: row !important;
+		width:100% !important;
+	}
+	#active {
+		border: 2px solid var(--secondary-color) !important;
+	}
+	.container {
+		margin: 3rem 9.5rem 0 9.5rem !important;
+	}
+	#filler {
+		height :8rem !important;
+	}
 }

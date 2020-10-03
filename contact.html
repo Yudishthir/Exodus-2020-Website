@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/contact.css">
   <script src="https://kit.fontawesome.com/218f9dbcc9.js" crossorigin="anonymous"></script>
+  <script src="./js/menu.js"></script>
   <title>Contact</title>
 </head>
 
@@ -13,12 +14,13 @@
   <div class="container">
     <div id="filler"></div>
     <nav class="web-nav">
-      <ul>
+      <ul class="web-nav-list">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./admission.html">Admission</a></li>
         <li><a href="./contact.html" id="active">Contact</a></li>
       </ul>
+      <button onclick="hamburger()" id="mobileButton"><i class="fas fa-bars"></i></button>
     </nav>
     <div id=content>
       <section id="details">
@@ -59,5 +61,6 @@
     </div>
 
 </body>
+
 
 </html>

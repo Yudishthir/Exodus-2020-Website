@@ -1,23 +1,24 @@
 @import "./colours.css";
 @import "./common.css";
-body{
+/*General elements */
+body {
   height:77vh;
 }
-h1{
+h1 {
   margin-bottom: 5vh;
   text-align: center;
 }
-i{
+i {
   size: 100%;
   font-weight: bold;
   display: inline;
   padding-right: 5%;
 }
-h3{
+h3 {
   padding-bottom: 3.5vh;
   text-align: center;
 }
-input{
+input {
   min-width: 100%;
   padding:0.9%;
   margin-bottom:5%;
@@ -30,7 +31,7 @@ input{
   box-shadow: none;
 }
 
-textarea{
+textarea {
   min-width: 100%;
   min-height: 10vh;
   max-height: 10vh;
@@ -44,15 +45,17 @@ textarea{
   color: #14c81a;
   box-shadow: none;
 }
-input:focus, textarea:focus{
+input:focus, textarea:focus {
   outline:0;
 }
+/*Classes and id*/
 #content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
 #details {
   margin-top:20vh;  
   border-width: 10px;
@@ -83,6 +86,7 @@ input:focus, textarea:focus{
   border-radius: 1px;
   align-self:right;
 }
+/*Buttons*/
 #submit {
   margin-left:38%;
   width:24%;
@@ -106,4 +110,47 @@ input:focus, textarea:focus{
   border-radius: 2px;
   background-color: #14c81a;
   color:#000;
+}
+/*Responsive design */
+@media screen and (max-width: 1032px) {
+  #details {
+    max-width: 36vw;
+    min-width: 36vw;
+  }
+  #form {
+    max-width: 38vw;
+    min-width: 38vw;
+  }
+}
+/*Single stack  for mobile*/
+@media screen and (max-width: 760px) {
+  #filler {
+    max-height:120px;
+  }
+  #content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  #details {
+    margin-left:0;
+    min-width:60vw;
+    margin-bottom: 5vh;
+    margin-top: 6vh;
+  }
+  #form {
+    margin-left:0;
+    min-width:60vw;
+    margin-top: 15vh;
+    margin-bottom: 7vh;
+  }
+}
+@media screen and (max-width: 488px) {
+  #details {
+    min-width:80vw;
+  }
+  #form {
+    min-width:80vw;
+  }
 }

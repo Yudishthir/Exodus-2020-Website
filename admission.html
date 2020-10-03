@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admissions</title>
+		<link rel="stylesheet" href="./css/admission.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script src="./js/main.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="filler"></div>
+			<nav class="web-nav">
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li id="active"><a href="#">Admission</a></li>
+				<li><a href="#">Contact</a></li>
+			</nav>
+			<header id="admission-title">
+				<h1>Admissions</h1>
+			</header>
+			<main id="admission-wrapper">
+				<div id="admission-form-wrapper">
+					<div id="search-form">
+						<i class="fa fa-search" aria-hidden="true"></i>
+						<input
+							type="text"
+							name="search-bar"
+							id="search-bar"
+							placeholder="Type to search"
+							onkeyup="search()"
+						/>
+					</div>
+					<div id="flex-wrapper">
+						<h1>Facilities:</h1>
+						<div class="facility-wrapper">
+							<input type="checkbox" name="hostel" id="hostel" />
+							<label for="hostel" onclick="addHostel()"
+								>Hostel</label
+							>
+						</div>
+						<div class="facility-wrapper">
+							<input type="checkbox" name="mess" id="mess" />
+							<label for="mess" onclick="addMess()">Mess</label>
+						</div>
+						<h1>Receipt:</h1>
+						<div id="receipt">
+							<ul id="receipt-list"></ul>
+						</div>
+						<h3>Total:<span id="total-cost">0</span></h3>
+						<button id="join-btn">
+							Enroll<i
+								class="fa fa-caret-right"
+								aria-hidden="true"
+							></i>
+						</button>
+					</div>
+				</div>
+				<div id="course-list-wrapper">
+					<ul id="course-list">
+						<li class="course-box">
+							<h1>test Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1500</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button
+								class="add-btn"
+								onclick="add(event)"
+								id="test"
+							>
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button class="add-btn" onclick="add(event)">
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button class="add-btn" onclick="add(event)">
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button
+								class="add-btn"
+								onclick="add(event)"
+								id="test"
+							>
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button
+								class="add-btn"
+								onclick="add(event)"
+								id="test"
+							>
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button
+								class="add-btn"
+								onclick="add(event)"
+								id="test"
+							>
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button
+								class="add-btn"
+								onclick="add(event)"
+								id="test"
+							>
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button
+								class="add-btn"
+								onclick="add(event)"
+								id="test"
+							>
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button
+								class="add-btn"
+								onclick="add(event)"
+								id="test"
+							>
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+						<li class="course-box">
+							<h1>History of Humanity</h1>
+							<div class="course-details-wrapper">
+								<p class="dept">Department of History</p>
+								<p class="course-id">$1000</p>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quibusdam esse asperiores
+								labore minima? Officiis placeat eius totam
+								ducimus vitae asperiores.
+							</p>
+							<button
+								class="add-btn"
+								onclick="add(event)"
+								id="test"
+							>
+								Add
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

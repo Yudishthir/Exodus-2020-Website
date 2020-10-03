@@ -8,17 +8,16 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
-		<script src="./js/main.js"></script>
 		<title>Exodus</title>
 	</head>
 	<body>
 		<div class="container">
 			<div id="filler"></div>
 			<nav class="web-nav">
-				<li href="#" id="active">Home</li>
-				<li href="#">About</li>
-				<li href="#">Admission</li>
-				<li href="#">Contact</li>
+				<li id="active"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="./admission.html">Admission</a></li>
+				<li><a href="#">Contact</a></li>
 			</nav>
 			<header id="home-title">
 				<h1>Manipal Institute of Technology</h1>
@@ -43,41 +42,41 @@
 					</div>
 					<div id="resources">
 						<div id="resources-left">
-							<div id="research"></div>
-							<div id="culture"></div>
+							<div id="research1"></div>
+							<div id="culture1"></div>
 						</div>
-						<div id="statistics"></div>
+						<div id="statistics1"></div>
 					</div>
 				</div>
 				<div id="home-right">
 					<h1>Announcements</h1>
 					<p class="content">New Nuka-cola vending machine found</p>
 					<p class="divider">
-						#######################################################
+						--------------------################--------------------
 					</p>
 					<p class="content">New Nuka-cola vending machine found</p>
 					<p class="divider">
-						#######################################################
+						--------------------################--------------------
 					</p>
 					<p class="content">New Nuka-cola vending machine found</p>
 					<p class="divider">
-						#######################################################
+						--------------------################--------------------
 					</p>
 					<p class="content">New Nuka-cola vending machine found</p>
 					<p class="divider">
-						#######################################################
+						--------------------################--------------------
 					</p>
 					<p class="content">New Nuka-cola vending machine found</p>
 					<p class="divider">
-						#######################################################
+						--------------------################--------------------
 					</p>
 					<p class="content">New Nuka-cola vending machine found</p>
 					<p class="divider">
-						#######################################################
+						--------------------################--------------------
 					</p>
 					<p class="content">New Nuka-cola vending machine found</p>
 					<p class="divider">
-						#######################################################
+						--------------------################--------------------
 					</p>
 					<p class="content">New Nuka-cola vending machine found</p>
 				</div>
@@ -196,28 +195,32 @@
 					<h1>Statistics</h1>
 				</header>
 				<div id="college-stat">
-					<div id="health">HP 90/120</div>
-					<div id="health-bar"></div>
-					<div class="stat-box">
-						<span>Students</span>
-						<span>4000</span>
-						<i class="fa fa-caret-up"></i>
+					<div id="health-boxes">
+						<div id="health">HP 90/120</div>
+						<div id="health-bar"></div>
 					</div>
-					<div class="stat-box">
-						<span>Faculty</span>
-						<span>4000</span>
-						<i class="fa fa-caret-up"></i>
-					</div>
-					<div class="stat-box">
-						<span>Alumini</span>
-						<span>4000</span>
-						<i class="fa fa-caret-up"></i>
+					<div id="stat-boxes">
+						<div class="stat-box">
+							<span>Students</span>
+							<span>4000</span>
+							<i class="fa fa-caret-up"></i>
+						</div>
+						<div class="stat-box">
+							<span>Faculty</span>
+							<span>4000</span>
+							<i class="fa fa-caret-up"></i>
+						</div>
+						<div class="stat-box">
+							<span>Alumini</span>
+							<span>4000</span>
+							<i class="fa fa-caret-up"></i>
+						</div>
 					</div>
 				</div>
 				<div id="question">
 					<h2>Are you ready ?</h2>
 					<button id="yes">Yes</button>
-					<button>No</button>
+					<button id="no">No</button>
 				</div>
 			</div>
 		</div>
@@ -226,4 +229,5 @@
 		</footer>
 	</body>
 	<script src="./js/matrix.js"></script>
+	<script src="./js/home.js"></script>
 </html>

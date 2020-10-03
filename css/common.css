@@ -31,6 +31,13 @@
 	padding: 0.4rem 1.5rem;
 }
 
+.web-nav > li > a,
+.web-nav > li > a:active,
+.web-nav > li > a:hover,
+.web-nav > li > a:visited {
+	text-decoration: none;
+	color: var(--secondary-color);
+}
 /* For the active element of the navbar */
 #active {
 	border: 2px solid var(--secondary-color);

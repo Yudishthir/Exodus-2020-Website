@@ -1,5 +1,6 @@
 @import "colours.css";
 @import "common.css";
+@import "breakpoints.css";
 
 * {
 	margin: 0;
@@ -9,9 +10,36 @@
 }
 
 body {
-	height: 100vh;
+	height: 100%;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	margin-right: 1rem;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--secondary-color);
+	border-right: none;
+	border-left: none;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece:end {
+	background: transparent;
+	margin-bottom: 100px;
+}
+
+::-webkit-scrollbar-track-piece:start {
+	background: transparent;
+	margin-top: 100px;
 }
 
 /* Group of title, quote and resouces */
@@ -40,7 +68,8 @@ body {
 
 .divider {
 	margin: 0.8rem 0;
-	font-size: 0.875rem;
+	text-align: center;
+	font-size: 0.6rem;
 	word-wrap: break-word;
 	width: 100%;
 }
@@ -90,24 +119,24 @@ body {
 	justify-content: space-between;
 }
 
-#resources > #resources-left > #culture {
+#resources > #resources-left > #culture1 {
 	height: 30%;
 	width: 100%;
 	background-color: var(--secondary-color);
 }
 
-#resources > #resources-left > #research {
+#resources > #resources-left > #research1 {
 	height: 60%;
 	width: 100%;
 }
 
-#resources > #statistics,
+#resources > #statistics1,
 #resources > #resources-left > div {
 	border: 2px solid var(--secondary-color);
 }
 
 .section-filler {
-	height: 4rem;
+	height: 2rem;
 	width: 100%;
 }
 
@@ -142,7 +171,6 @@ canvas {
 
 #research-box-container > .box {
 	width: 25%;
-	height: 40vh;
 	border: 1px solid var(--secondary-color);
 	background-color: var(--primary-color);
 	opacity: 80%;
@@ -215,13 +243,20 @@ canvas {
 	margin-top: 1rem;
 }
 
-#statistics > #college-stat > #health {
+#statistics > #college-stat > #health-boxes {
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+	padding-right: 2rem;
+}
+
+#statistics > #college-stat > #health-boxes > #health {
 	font-size: 20px;
 	font-weight: bold;
 }
 
-#statistics > #college-stat > #health-bar {
-	width: 40%;
+#statistics > #college-stat > #health-boxes > #health-bar {
+	width: 80%;
 	height: 20px;
 	background-image: linear-gradient(
 		to right,
@@ -234,7 +269,13 @@ canvas {
 	border-radius: 15px;
 }
 
-#statistics > #college-stat > .stat-box {
+#statistics > #college-stat > #stat-boxes {
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+}
+
+#statistics > #college-stat > #stat-boxes > .stat-box {
 	font-size: 20px;
 	padding: 0.8rem 1rem;
 	border-top: 2px solid var(--secondary-color);
@@ -256,6 +297,7 @@ canvas {
 	color: var(--secondary-color);
 	font-size: 20px;
 	background: none;
+	outline: none !important;
 	margin-top: 2rem;
 }
 
@@ -278,4 +320,220 @@ footer {
 footer > p {
 	text-align: center;
 	font-weight: bold;
+}
+
+/* Tablet view */
+@media only screen and (max-width: 1024px) {
+	#home {
+		flex-direction: column;
+	}
+	#home > #home-left,
+	#home > #home-right {
+		width: 100%;
+	}
+	#home > #home-right > h1 {
+		margin-bottom: 1.5rem;
+	}
+	.section-filler {
+		height: 1rem;
+	}
+	#research {
+		height: 76vh;
+	}
+	#research > #research-box-container {
+		flex-direction: column;
+		align-items: center;
+		top: -68vh;
+		height: 68vh;
+	}
+	canvas {
+		height: 68vh;
+	}
+	#research > #research-box-container > .box {
+		width: 90%;
+	}
+	#culture {
+		margin-top: 1vh;
+	}
+	#culture > #culture-content > #culture-graphics {
+		width: 0;
+	}
+	#culture > #culture-content > #culture-graphics > img {
+		display: none;
+		width: 0;
+	}
+	#culture > #culture-content > #culture-data {
+		width: 100%;
+	}
+	#statistics > #college-stat {
+		flex-direction: column;
+		width: 100%;
+		height: 10vh;
+	}
+	#statistics > #college-stat > #health-boxes {
+		width: 100%;
+		justify-content: space-around;
+	}
+	#statistics > #college-stat > #health-boxes > #health-bar {
+		width: 60%;
+	}
+	#statistics > #college-stat > #stat-boxes {
+		width: 100%;
+		justify-content: space-around;
+	}
+	#statistics > #question {
+		width: 50%;
+	}
+}
+
+/* Mobile view */
+@media only screen and (max-width: 768px) {
+	.container {
+		margin: 0 1rem;
+	}
+	#quote > p {
+		left: 10px;
+	}
+	#home > #home-left > #resources {
+		flex-direction: column;
+		height: 73vh;
+		margin-top: 1rem;
+	}
+	#home > #home-left > #resources > #resources-left {
+		width: 100%;
+		height: 30vh;
+	}
+	#home > #home-left > #resources > #statistics1 {
+		width: 100%;
+		height: 40vh;
+	}
+	.section-filler {
+		display: none;
+		height: 0;
+	}
+	#research {
+		height: 150vh;
+	}
+	#research > #research-box-container {
+		flex-direction: column;
+		align-items: center;
+		top: -125vh;
+		height: 125vh;
+	}
+	canvas {
+		height: 125vh;
+	}
+	#research > #research-box-container > .box {
+		width: 90%;
+	}
+	#culture {
+		margin-top: 40vh;
+	}
+	#statistics > #college-stat > #health-boxes {
+		align-items: center;
+		justify-content: space-around;
+	}
+	#statistics > #college-stat {
+		height: 35vh;
+	}
+	#statistics > #college-stat > #stat-boxes {
+		flex-direction: column;
+		margin-top: 1rem;
+		height: 35vh;
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#statistics > #college-stat > #stat-boxes > .stat-box {
+		width: 55%;
+	}
+	#statistics > #question {
+		width: 100%;
+		margin-top: 1rem;
+	}
+	:root {
+		font-size: 14px;
+	}
+}
+
+/* Small mobile view */
+@media only screen and (max-width: 380px) {
+	#research > #research-box-container > .box > .box-content > button {
+		display: none;
+	}
+	#research {
+		height: 150vh;
+	}
+	#research > #research-box-container {
+		flex-direction: column;
+		align-items: center;
+		top: -145vh;
+		height: 141vh;
+	}
+	canvas {
+		height: 150vh;
+	}
+	#research > #research-box-container > .box {
+		width: 90%;
+	}
+	#culture {
+		margin-top: 67vh;
+	}
+	#statistics > #college-stat > #health-boxes {
+		flex-direction: column;
+		width: 100%;
+		padding-right: 0;
+		height: 15vh;
+	}
+	#statistics > #college-stat > #health-boxes > #health-bar {
+		width: 100%;
+	}
+	#statistics > #college-stat {
+		height: 58vh;
+	}
+	#statistics > #college-stat > #stat-boxes {
+		flex-direction: column;
+		margin-top: 1rem;
+		height: 40vh;
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#statistics > #college-stat > #stat-boxes > .stat-box {
+		width: 65%;
+	}
+	#statistics > #question {
+		width: 100%;
+		margin-top: 1rem;
+	}
+}
+
+/* Animations */
+
+#research1,
+#culture1,
+#statistics1,
+.box > .box-content > button,
+#statistics > #question > button {
+	transition: background 1s ease, color 1s ease;
+}
+
+#resources > #resources-left > #culture1:hover,
+#research-box-container > .box > .box-content > button:hover,
+#statistics > #question > #yes:hover {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+#research1:hover,
+#statistics1:hover,
+#statistics > #question > #no:hover {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+#research-box-container > .box > .box-content > button:focus,
+#statistics > #question > #yes:focus,
+#statistics > #question > #no:focus {
+	outline: none !important;
 }

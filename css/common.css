@@ -30,9 +30,10 @@ body {
 	display: flex;
 	position: fixed;
 	top: 4rem;
-	width:100%;
-
+	width:96%;
 	z-index: 10;
+	align-self: center;
+	justify-self: center;
 }
 .web-nav > ul > li{
 	list-style: none;

@@ -33,7 +33,7 @@ button:active, button:focus, button:hover {
   font-size: 120%;
 }
 #founder {
-  margin-top: 6vh;
+  
   padding: 3rem;
   font-size: 110%;
   margin-bottom:20px;
@@ -55,7 +55,6 @@ button:active, button:focus, button:hover {
   align-self: top;
 }
 #testimonial {
-  margin-top: 6vh;
   padding: 3rem;
   font-size: 120%;
   margin-bottom:40px;

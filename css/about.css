@@ -1,0 +1,103 @@
+@import "./colours.css";
+@import "./common.css";
+i {
+  color:#14c81a;
+  size: 600%;
+}
+button {
+  display:inline-block;
+  background: #000;
+  outline:0;
+  outline-offset: 0;
+  box-shadow: 0;
+  border-radius: 100px;
+  margin-left: 1rem;
+  border:solid #000;
+  border-width: 1px;
+}
+button:active, button:focus, button:hover {
+  outline:0;
+  outline-offset: 0;
+  box-shadow: 0;
+  border-style: outset;
+  border:solid #14c81a;
+}
+button:active {
+  border:solid #000;
+}
+
+#mainAbout {
+  margin-top: 12vh;
+  padding: 3rem;
+  font-size: 120%;
+}
+#founder {
+  margin-top: 6vh;
+  padding: 3rem;
+  font-size: 120%;
+  margin-bottom:20px;
+}
+#founderMainDiv {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#founderMainDiv img {
+  width: 8rem ;
+  height:8rem;
+  margin: 10% 0;
+  vertical-align: top;
+}
+#leftFounder, #rightFounder {
+  padding:0 3vw;
+  padding-left:0;
+  align-self: top;
+  align-items: baseline;
+}
+#testimonial {
+  margin-top: 6vh;
+  padding: 3rem;
+  font-size: 120%;
+  margin-bottom:40px;
+}
+#testimonial > h2 {
+  margin-bottom: 3%;
+}
+#moveLeft {
+  width:2rem;
+  height:2rem;
+}
+#moveRight {
+  width:2rem;
+  height:2rem;
+}
+#screen1 {
+  display:flex;
+  flex-direction: row;
+}
+#screen2 {
+  display:none;
+}
+#screen3 {
+  display:none;
+}
+#screen1 > img, #screen2 > img, #screen3 > img {
+  width: 8rem;
+  height:8rem;
+}
+@media screen and (max-width :1024px){
+  #mainAbout {
+    padding:3rem 0;
+  }
+  #testimonial {
+    padding:3rem 0;
+  }
+  #founder {
+    padding:3rem 0;
+  }
+}
+@media screen and (max-width : 934){
+  .container {
+    margin: 0 !important;
+  }
+}

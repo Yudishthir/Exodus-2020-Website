@@ -104,7 +104,7 @@ body {
 		border: 2px solid var(--secondary-color) !important;
 	}
 	.container {
-		margin: 3rem 9.5rem 0 9.5rem !important;
+		margin: 3rem 9.5rem 0 9.5rem;
 	}
 	#filler {
 		height :8rem !important;

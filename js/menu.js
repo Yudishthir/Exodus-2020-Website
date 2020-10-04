@@ -6,4 +6,5 @@ function hamburger() {
   x[0].style.width = "100vw";
   x[0].style.justifyItems = "center";
   x[0].style.alignItems = "center";
+  document.getElementById("")
 }

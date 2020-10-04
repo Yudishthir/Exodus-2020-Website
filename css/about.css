@@ -40,7 +40,7 @@ button:active {
 #founderMainDiv {
   display: flex;
   justify-items: center;
-  align-items: center;
+  align-items: baseline;
 }
 #founderMainDiv img {
   width: 8rem ;
@@ -52,7 +52,6 @@ button:active {
   padding:0 3vw;
   padding-left:0;
   align-self: top;
-  align-items: baseline;
 }
 #testimonial {
   margin-top: 6vh;
@@ -96,8 +95,20 @@ button:active {
     padding:3rem 0;
   }
 }
-@media screen and (max-width : 934){
-  .container {
-    margin: 0 !important;
+@media screen and (max-width : 768px){
+  #founderMainDiv {
+    flex-direction: column;
+  }
+  #screen1 > img, #screen2 >img, #screen3 > img {
+    display: none;
+  }
+  #founderMainDiv img {
+    width: 8rem ;
+    height:8rem;
+    margin: 5% 0;
+    vertical-align: top;
+  }
+  #mainContent {
+    margin: 2vw;
   }
 }

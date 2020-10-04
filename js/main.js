@@ -137,3 +137,30 @@ function addMess() {
 		}
 	}
 }
+
+function closer() {
+	var modal = document.getElementById("myModal");
+	modal.style.display = "none";
+}
+
+function enroll() {
+	var modal = document.getElementById("myModal");
+	let content = modal.getElementsByTagName("div")[1];
+	let receipt = document.getElementById("receipt-list");
+	let total = document.getElementById("total-cost").innerText;
+
+	modal.style.display = "block";
+	content.innerHTML = "";
+	li = receipt.getElementsByTagName("li");
+	if (li.length == 0) {
+		content.innerHTML += `Please select a course and valid facilities`;
+	} else {
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("p")[0];
+			c = li[i].getElementsByTagName("p")[1];
+			content.innerHTML += `<div style="width:80%;display:flex;justify-content:space-between;font-size:1.2rem"><p>${a.innerText}</p><p>${c.innerText}</p></div>`;
+		}
+		content.innerHTML += `<div style="width:80%;display:flex;justify-content:space-between;font-size:1.2rem;font-weight:bold;margin-top:1rem"><p>Total:</p><p>\$${total}</p></div>`;
+		content.innerHTML += `<button id="print" style="font-size:1.1rem;margin:auto;border:2px solid #14c81a;color:#14c81a;outline:none !important;background-color:#000000;padding:1rem 1.5rem;margin-top:2rem">Print</button>`;
+	}
+}

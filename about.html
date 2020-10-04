@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/about.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script src="./js/menu.js"></script>
+
+		<title>About us</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="filler"></div>
+			<nav class="web-nav">
+				<ul class="web-nav-list">
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./about.html" id="active">About</a></li>
+					<li><a href="./admission.html">Admission</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+				<button onclick="hamburger()" id="mobileButton">
+					<i class="fa fa-bars"></i>
+				</button>
+			</nav>
+			<header id="about-title">
+				<h1>About Us</h1>
+			</header>
+			<div id="mainContent">
+				<section id="mainAbout">
+					<p>
+						Since Year 0, we all have been facing different
+						hardships and its essential to keep humanity alive. Many
+						of us thought that this was the end, but it is never
+						over. Thanks to Bictro Institutes&#39; founding members,
+						we are still alive.
+					</p>
+					<p>
+						Bictro Institute was established in Year 1 by the
+						founders Yudhisther Lokhande and Kushagr Sharma. After
+						being the leading scientist in the field of human
+						survival, they decided to start a university to help
+						educate the survivors of the disastrous apocalypse.
+						Their research was key in predicting the events that
+						occurred in 2075 preA. The Machine Learning model that
+						they built was helped in evacuations at the correct
+						time.
+					</p>
+					<p>
+						Ever since Year 1, Bictro Institute has been the leading
+						institute in Education on the planet with up- to-date
+						courses, a real time AI question answering system, and
+						of course the best in-house faculty. The focus of the
+						Institute is to retain as much knowledge as we can from
+						the previous timeline and at the same time progress
+						towards technology 100, the plan that we on earth, could
+						not complete.
+					</p>
+					<p>
+						Bictro Institute is the oldest institute postA and has
+						continued to be the leading institute in Education for
+						the past 7 years. Ranking number 1 university on Planet
+						Abot for the past 4 years, Bictro Institute scores the
+						most for quality of Education along with student
+						welfare.
+					</p>
+				</section>
+				<section id="testimonial">
+					<h1>Testimonials</h1>
+					<div id="sildeshow">
+						<div id="screen1">
+							<img
+								src="./assets/vaultboy.png"
+								alt="Attestant Photo"
+							/>
+							<q>
+								My experience at Bictro Institute is great and
+								memorable. The teachers and mentors are helpful
+								and helped me to improve my academic and
+								interpersonal skills.
+							</q>
+						</div>
+						<div id="screen2">
+							<img
+								src="./assets/vaultboy.png"
+								alt="Attestant Photo"
+							/>
+							<q>
+								I am truly grateful to be part of the Bictro
+								Institute. It has been a huge source of
+								encouragement and inspiration. Through the
+								seminars and interactive community I have
+								learned a whole lot.
+							</q>
+						</div>
+						<div id="screen3">
+							<img
+								src="./assets/vaultboy.png"
+								alt="Attestant Photo"
+							/>
+							<q>
+								My experience in this instate was very complex
+								but overall very great. You not only got your
+								feet wet a little, I felt you were challenged,
+								inspired, and driven to the edge and then
+								totally immersed.
+							</q>
+						</div>
+						<br />
+						<div id="button-wrapper">
+							<button id="moveLeft" onclick="leftSlide()">
+								<i class="fa fa-chevron-left"></i>
+							</button>
+							<button id="moveRight" onclick="rightSlide()">
+								<i class="fa fa-chevron-right"></i>
+							</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+	<script src="./js/slideshow.js"></script>
+</html>

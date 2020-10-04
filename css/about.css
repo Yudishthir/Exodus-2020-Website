@@ -1,0 +1,234 @@
+@import "./colours.css";
+@import "./common.css";
+i {
+	color: #14c81a;
+	size: 600%;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	margin-right: 1rem;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--secondary-color);
+	border-right: none;
+	border-left: none;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece:end {
+	background: transparent;
+	margin-bottom: 100px;
+}
+
+::-webkit-scrollbar-track-piece:start {
+	background: transparent;
+	margin-top: 100px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Consolas;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+#about-title > h1 {
+	margin-top: 9rem;
+	font-size: 4rem;
+	font-weight: bold;
+	z-index: -1;
+}
+
+.web-nav-list > li:nth-child(1) > a {
+	padding-left: 0;
+}
+
+.web-nav-list > li:nth-child(1) > a:hover {
+	padding-left: 0;
+}
+
+#button-wrapper > button {
+	display: inline-block;
+	outline: 0;
+	background: #000;
+	outline-offset: 0;
+	box-shadow: 0;
+	border-radius: 50%;
+	border: solid #000;
+	border-width: 2px;
+	border: solid #14c81a;
+	padding: 1rem;
+	transition: all 0.5s ease;
+}
+
+#button-wrapper > button:nth-child(2) {
+	margin-left: 1rem;
+}
+
+#button-wrapper > button:first-child > i {
+	font-size: 1.4rem;
+	position: relative;
+	top: -9.5px;
+	left: -10px;
+}
+
+#button-wrapper > button:last-child > i {
+	font-size: 1.4rem;
+	position: relative;
+	top: -9.5px;
+	left: -7px;
+}
+
+#button-wrapper {
+	text-align: center;
+}
+
+#button-wrapper > button:hover {
+	background-color: var(--secondary-color);
+}
+
+#button-wrapper > button:hover > i {
+	color: var(--primary-color);
+}
+
+button:active,
+button:focus {
+	outline: 0;
+	outline-offset: 0;
+	box-shadow: 0;
+	border-style: outset;
+	border: solid #14c81a;
+}
+
+#slideshow button:active {
+	border: solid #000;
+}
+
+#mainAbout {
+	margin-top: 1rem;
+	padding: 1rem 3rem;
+	font-size: 120%;
+	border-left: 7px solid var(--secondary-color);
+}
+
+#mainAbout > p {
+	line-height: 23px;
+}
+#mainAbout > p:nth-child(2),
+#mainAbout > p:nth-child(3),
+#mainAbout > p:nth-child(4) {
+	margin-top: 1rem;
+}
+
+#testimonial {
+	padding: 3rem;
+	font-size: 120%;
+	margin-bottom: 40px;
+}
+#testimonial > h1 {
+	margin-bottom: 3%;
+	font-size: 2.5rem;
+	text-align: center;
+}
+#moveLeft {
+	width: 2rem;
+	height: 2rem;
+}
+#moveRight {
+	width: 2rem;
+	height: 2rem;
+}
+
+#screen1 {
+	display: flex;
+	flex-direction: row;
+	padding: 1rem;
+	align-items: center;
+	border: 1px solid var(--secondary-color);
+}
+#screen2 {
+	display: none;
+	padding: 1rem;
+	align-items: center;
+	border: 1px solid var(--secondary-color);
+}
+#screen3 {
+	display: none;
+	padding: 1rem;
+	align-items: center;
+	border: 1px solid var(--secondary-color);
+}
+#screen1 > img,
+#screen2 > img,
+#screen3 > img {
+	width: 8rem;
+	height: 8rem;
+	margin-right: 1rem;
+}
+@media screen and (max-width: 1024px) {
+	#mainAbout {
+		padding: 3rem 0;
+	}
+	#testimonial {
+		padding: 3rem 0;
+	}
+	#founder {
+		padding: 3rem 0;
+	}
+	#mainAbout {
+		border: 0;
+		padding: 0 0;
+	}
+}
+@media screen and (max-width: 768px) {
+	.container {
+		margin: 0 1rem 0 1rem;
+	}
+	#screen1 > img,
+	#screen2 > img,
+	#screen3 > img {
+		display: none;
+	}
+	#mainAbout {
+		border: 0;
+		padding: 0 0;
+	}
+	#filler {
+		height: 10vh;
+	}
+	#about-title > h1 {
+		margin-top: 5rem;
+	}
+	.web-nav-list > li:nth-child(1) > a {
+		padding-left: 1.5rem;
+	}
+	:root {
+		font-size: 14px;
+	}
+	#button-wrapper > button:first-child > i {
+		font-size: 1.4rem;
+		position: relative;
+		top: -7.5px;
+		left: -8px;
+	}
+
+	#button-wrapper > button:last-child > i {
+		font-size: 1.4rem;
+		position: relative;
+		top: -7.5px;
+		left: -5px;
+	}
+}

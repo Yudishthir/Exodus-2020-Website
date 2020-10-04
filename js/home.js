@@ -4,16 +4,17 @@ let typerparent = document
 let typer = typerparent.innerText;
 typer += "|";
 let str;
-let turn = true;
+let turner = true;
+
 typing();
 
 function typing() {
-	if (turn) {
+	if (turner) {
 		str = typer.slice(0, -1);
-		turn = false;
+		turner = false;
 	} else {
 		str = typer.substring(0);
-		turn = true;
+		turner = true;
 	}
 	typerparent.innerText = str;
 	setTimeout(typing, 500);

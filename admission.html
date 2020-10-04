@@ -10,15 +10,23 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
 		<script src="./js/main.js"></script>
+		<script src="./js/menu.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<div id="filler"></div>
 			<nav class="web-nav">
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li id="active"><a href="#">Admission</a></li>
-				<li><a href="#">Contact</a></li>
+				<ul class="web-nav-list">
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./about.html">About</a></li>
+					<li>
+						<a href="./admission.html" id="active">Admission</a>
+					</li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+				<button onclick="hamburger()" id="mobileButton">
+					<i class="fa fa-bars"></i>
+				</button>
 			</nav>
 			<header id="admission-title">
 				<h1>Admissions</h1>
@@ -52,7 +60,7 @@
 							<ul id="receipt-list"></ul>
 						</div>
 						<h3>Total:<span id="total-cost">0</span></h3>
-						<button id="join-btn">
+						<button id="join-btn" onclick="enroll()">
 							Enroll<i
 								class="fa fa-caret-right"
 								aria-hidden="true"
@@ -63,16 +71,14 @@
 				<div id="course-list-wrapper">
 					<ul id="course-list">
 						<li class="course-box">
-							<h1>test Humanity</h1>
+							<h1>Abot,the World Unexplored</h1>
 							<div class="course-details-wrapper">
-								<p class="dept">Department of History</p>
+								<p class="dept">Department of Exploration</p>
 								<p class="course-id">$1500</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								A complete guide to the world’s unexplored secrets and research about
+the planet we now inhabit.
 							</p>
 							<button
 								class="add-btn"
@@ -84,16 +90,14 @@
 							</button>
 						</li>
 						<li class="course-box">
-							<h1>History of Humanity</h1>
+							<h1>Machine Learning</h1>
 							<div class="course-details-wrapper">
-								<p class="dept">Department of History</p>
+								<p class="dept">Department of Science</p>
 								<p class="course-id">$1000</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								Study of computer algorithms in todays world to improve automatically though
+experience.
 							</p>
 							<button class="add-btn" onclick="add(event)">
 								Add
@@ -101,16 +105,14 @@
 							</button>
 						</li>
 						<li class="course-box">
-							<h1>History of Humanity</h1>
+							<h1>Artificial Intelligence</h1>
 							<div class="course-details-wrapper">
-								<p class="dept">Department of History</p>
-								<p class="course-id">$1000</p>
+								<p class="dept">Department of Science</p>
+								<p class="course-id">$2000</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								Simulation of human intelligence in machines that are programmed to think
+like humans or mimic their actions.
 							</p>
 							<button class="add-btn" onclick="add(event)">
 								Add
@@ -118,16 +120,13 @@
 							</button>
 						</li>
 						<li class="course-box">
-							<h1>History of Humanity</h1>
+							<h1>Communication 5D</h1>
 							<div class="course-details-wrapper">
-								<p class="dept">Department of History</p>
-								<p class="course-id">$1000</p>
+								<p class="dept">Department of Technology</p>
+								<p class="course-id">$1100</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								Communication into different dimensions to communicate with the life infinity and beyond.
 							</p>
 							<button
 								class="add-btn"
@@ -142,13 +141,10 @@
 							<h1>History of Humanity</h1>
 							<div class="course-details-wrapper">
 								<p class="dept">Department of History</p>
-								<p class="course-id">$1000</p>
+								<p class="course-id">$1800</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								A study of the history of Earth till 2075 preA covering the important the preA civilization history.
 							</p>
 							<button
 								class="add-btn"
@@ -160,16 +156,13 @@
 							</button>
 						</li>
 						<li class="course-box">
-							<h1>History of Humanity</h1>
+							<h1>Genetics</h1>
 							<div class="course-details-wrapper">
 								<p class="dept">Department of History</p>
-								<p class="course-id">$1000</p>
+								<p class="course-id">$1600</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								Study of Heredity and importance of keeping the genetic pool pure, to ensure humanity’s survival.
 							</p>
 							<button
 								class="add-btn"
@@ -181,16 +174,13 @@
 							</button>
 						</li>
 						<li class="course-box">
-							<h1>History of Humanity</h1>
+							<h1>Development 5D</h1>
 							<div class="course-details-wrapper">
-								<p class="dept">Department of History</p>
-								<p class="course-id">$1000</p>
+								<p class="dept">Department of Technology</p>
+								<p class="course-id">$2000</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								Development in the 5<sup>th<sup> Dimension. Cascading timeline project and its progress.
 							</p>
 							<button
 								class="add-btn"
@@ -202,16 +192,13 @@
 							</button>
 						</li>
 						<li class="course-box">
-							<h1>History of Humanity</h1>
+							<h1>Sustainable Agriculture</h1>
 							<div class="course-details-wrapper">
-								<p class="dept">Department of History</p>
-								<p class="course-id">$1000</p>
+								<p class="dept">Department of Survival</p>
+								<p class="course-id">$1700</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								The art and science of cultivating the soil, growing crops, and raising livestock.
 							</p>
 							<button
 								class="add-btn"
@@ -223,16 +210,13 @@
 							</button>
 						</li>
 						<li class="course-box">
-							<h1>History of Humanity</h1>
+							<h1>Disaster Management</h1>
 							<div class="course-details-wrapper">
-								<p class="dept">Department of History</p>
-								<p class="course-id">$1000</p>
+								<p class="dept">Department of Survival</p>
+								<p class="course-id">$1200</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								Study of conservation of lives, technology, knowledge, and resources during any disaster.
 							</p>
 							<button
 								class="add-btn"
@@ -244,16 +228,13 @@
 							</button>
 						</li>
 						<li class="course-box">
-							<h1>History of Humanity</h1>
+							<h1>Shuttle Engineering</h1>
 							<div class="course-details-wrapper">
-								<p class="dept">Department of History</p>
+								<p class="dept">Department of Science</p>
 								<p class="course-id">$1000</p>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Quibusdam esse asperiores
-								labore minima? Officiis placeat eius totam
-								ducimus vitae asperiores.
+								Core subject that deals with the transportation in today’s world. Fuel dynamics and conservation is vital in today’s day!
 							</p>
 							<button
 								class="add-btn"
@@ -267,6 +248,14 @@
 					</ul>
 				</div>
 			</main>
+		</div>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<button class="close" onclick="closer()">&times;</button>
+				<div id="modal-data"></div>
+			</div>
 		</div>
 	</body>
 </html>

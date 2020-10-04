@@ -145,6 +145,7 @@ body {
 	margin-top: 3rem;
 	font-size: 4rem;
 	font-weight: bold;
+	word-wrap: break-word;
 }
 
 /* Matrix animation */
@@ -208,6 +209,7 @@ canvas {
 #culture > #culture-content {
 	display: flex;
 	width: 100%;
+	align-items: center;
 }
 #culture > #culture-content > #culture-graphics {
 	width: 40%;
@@ -333,6 +335,7 @@ footer > p {
 	}
 	#home > #home-right > h1 {
 		margin-bottom: 1.5rem;
+		text-align: center;
 	}
 	.section-filler {
 		height: 1rem;
@@ -454,6 +457,9 @@ footer > p {
 	:root {
 		font-size: 14px;
 	}
+	#home-title > h1 {
+		margin-top: 4.5rem;
+	}
 }
 
 /* Small mobile view */
@@ -506,6 +512,23 @@ footer > p {
 		width: 100%;
 		margin-top: 1rem;
 	}
+	#home-title > h1 {
+		margin-top: 4.5rem;
+	}
+}
+
+#research1,
+#statistics1,
+#culture1 {
+	padding: 1.5rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#culture1 {
+	color: var(--primary-color);
 }
 
 /* Animations */
